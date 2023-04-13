@@ -21,11 +21,9 @@ include("conexion.php");
   <main class="table">
     <section class="table__header">
       <h1>Aprendices Williams</h1>
-      <div class="input-group">
-        <input type="search" placeholder="buscar datos">
-        <img src="images/search.png" alt="">
-      </div>
     </section>
+
+    
     <section class="table__body">
       <table>
         <thead>
@@ -35,13 +33,7 @@ include("conexion.php");
             <th> Apellido <span class="icon-arrow"></span></th>
             <th> curso <span class="icon-arrow"></span></th>
             <th> Nficha <span class="icon-arrow"></span></th>
-          
-
-
-
-
-
-          </tr>
+        </tr>
         </thead>
         <tbody>
 
