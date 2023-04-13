@@ -18,6 +18,7 @@ include("conexion.php");
 
 <body>
 
+
   <main class="table">
     <section class="table__header">
       <h1>Aprendices Williams</h1>
@@ -35,11 +36,7 @@ include("conexion.php");
             <th> Apellido <span class="icon-arrow"></span></th>
             <th> curso <span class="icon-arrow"></span></th>
             <th> Nficha <span class="icon-arrow"></span></th>
-          
-
-
-
-
+            <th> Opciones <span class="icon-arrow"></span></th>
 
           </tr>
         </thead>
@@ -69,6 +66,11 @@ include("conexion.php");
               <td>
                 <?php echo $mostra['Nficha'] ?>
               </td>
+              <td>
+                <button class="btn btn-danger">eliminar</button>
+                <button class="btn btn-info">Actualizar</button>
+
+              </td>
             </tr>
             <?php
           }
@@ -78,7 +80,7 @@ include("conexion.php");
       </table>
     </section>
   </main>
-  
+
 </body>
 
 </html>

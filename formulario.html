@@ -40,22 +40,18 @@
             </p>
           </div>
           <div class="contact-info">
-            <h4>Incricion Al Sistema De Planas</h4>
+            <h4 >Previsualizacion De Su Foto</h4>
             <ul>
               <li>
-                <div id="preview"  class="styleImage"> </div>
-              </li>
-              <li>
-               
-              </li>
-              <li>
-                
+                <div id="preview"   class="styleImage"> </div>
               </li>
             </ul>
           </div>
         </form>
         </div>
+          
       </div>
+
 
       <script>
         document.getElementById('file').onchange=function(e){
@@ -65,13 +61,13 @@
             let preview = document.getElementById('preview');
             imagen=document.createElement('img');
             imagen.src=reader.result;
-            imagen.style.width ="200px"
+            imagen.style.width ="150px"
+
             preview.append(imagen);
           }
         }
 
-          var sa = document.getElementById('file');
-          alert("datos guardados exitosamente");
+       
         
 
         
