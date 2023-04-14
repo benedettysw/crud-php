@@ -24,6 +24,7 @@ include("admin.php");
         <div class="row p-2">
             <div class="col-9">
               <h1 style="font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;">Registro Estudiantes</h1>
+              <a href="../registro.html" class="btn btn-success">registra admin</a>
                 <form action="admin.php" method="post" enctype="multipart/form-data">
                     <label for="Nombre">Nombre</label>
                     <input type="text" name="nombre"  class="form-control" required>
@@ -45,22 +46,24 @@ include("admin.php");
 
     <main class="table">
         <section class="table__body">
+          <h1>Datos Admin</h1>
       <table>
         <thead>
           <tr>
             <th> id <span class="icon-arrow"></span></th>
             <th> Nombre <span class="icon-arrow"></span></th>
-            <th> Apellido <span class="icon-arrow"></span></th>
-            <th> curso <span class="icon-arrow"></span></th>
-            <th> Nficha <span class="icon-arrow"></span></th>
+            <th> clave <span class="icon-arrow"></span></th>
+            <th> correo <span class="icon-arrow"></span></th>
             <th> Opciones <span class="icon-arrow"></span></th>
+
+           
 
         </tr>
         </thead>
         <tbody>
 
           <?php
-          $sql = " Select * from getfiles";
+          $sql = " Select * from validar";
           $resul = mysqli_query($enlace, $sql);
 
           while ($mostra = mysqli_fetch_array($resul)) {
@@ -71,18 +74,14 @@ include("admin.php");
                 <?php echo $mostra['id'] ?>
               </td>
               <td>
-                <img src="data:image/jpg;base64,<?= base64_encode($mostra['foto']) ?>" alt="">
                 <?php echo $mostra['usuario'] ?>
               </td>
               <td>
                 <?php echo $mostra['clave'] ?>
               </td>
               <td>
-                <?php echo $mostra['curso'] ?>
-              </td>
-              <td>
-                <?php echo $mostra['Nficha'] ?>
-              </td>
+                <?php echo $mostra['correo'] ?>
+            </td>
               <td>
                <a class="btn btn-danger" href="../php/eliminar.php?id= <?php echo $mostra['id'];?>">eliminar </a>
                <a class="btn btn-info" href="../php/eliminar.php?id= <?php echo $mostra['id'];?>">Actualizar</a>
