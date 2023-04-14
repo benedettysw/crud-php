@@ -23,6 +23,7 @@ include("admin.php");
     <div class="container">
         <div class="row p-2">
             <div class="col-9">
+              <h1 style="font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;">Registro Estudiantes</h1>
                 <form action="admin.php" method="post" enctype="multipart/form-data">
                     <label for="Nombre">Nombre</label>
                     <input type="text" name="nombre"  class="form-control" required>
@@ -34,7 +35,7 @@ include("admin.php");
                     <input type="text" name="Nficha" id="nombre" class="form-control" required>
                     <label for="archivo">Sube un archivo</label>
                     <input type="file" name="file" class="form-control" required>
-                    <button name="registro" class="btn btn-primary mt-2">Subir archivo</button>
+                    <button name="registro" class="btn btn-primary mt-2">Guardar</button>
                 </form>
             </div>
         </div>
@@ -83,10 +84,11 @@ include("admin.php");
                 <?php echo $mostra['Nficha'] ?>
               </td>
               <td>
-                <button class="btn btn-success">Actualizar</button>
-                <button class="btn btn-danger">Eliminar</button>
+               <a class="btn btn-info" href="../php/eliminar.php?id= <?php echo $mostra['id'];?>"><img src="../img/delete.png"> </a>
+               <a class="btn btn-info" href="../php/eliminar.php?id= <?php echo $mostra['id'];?>">Actualizar</a>
 
-             </td>
+
+          </td>
             </tr>
             <?php
           }
