@@ -18,7 +18,7 @@ if(isset ($_POST['registro'])){
     $imagen1 = addslashes(file_get_contents($imagen1['tmp_name']));
 
     $insertadatos = "INSERT INTO getfiles VALUES ('','$nombre','$clave','$grado','$ids','$imagen1')";
-    $ejecutarInserta = mysqli_query ($enlace , $insertadatos);
+  
 
     header("location: ../formulario.html");
 
